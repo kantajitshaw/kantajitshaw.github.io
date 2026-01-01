@@ -1,329 +1,376 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kantajit Shaw – Senior Applied Machine Learning & Deep Learning Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <meta name="referrer" content="origin">
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #fafbfc;
+            font-size: 16px;
+        }
 
-  <title>Kantajit Shaw - Resume</title>
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 60px 30px;
+        }
 
-  <!-- Bootstrap core CSS -->
-  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        header {
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 1px solid #e1e8ed;
+        }
 
-  <!-- Custom fonts for this template -->
-  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
-  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #1a2332;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
 
-  <!-- Custom styles for this template -->
-  <link href="css/resume.min.css" rel="stylesheet">
+        .title {
+            font-size: 1.15rem;
+            color: #546e7a;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
 
+        .summary {
+            font-size: 1.05rem;
+            color: #455a64;
+            max-width: 720px;
+            line-height: 1.7;
+        }
+
+        .contact-links {
+            margin-top: 24px;
+            display: flex;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: #5c7a8a;
+            text-decoration: none;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: color 0.2s;
+        }
+
+        .contact-links a:hover {
+            color: #2c3e50;
+        }
+
+        section {
+            margin-bottom: 50px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1a2332;
+            margin-bottom: 28px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #e1e8ed;
+        }
+
+        .experience-item {
+            margin-bottom: 36px;
+        }
+
+        .experience-header {
+            margin-bottom: 12px;
+        }
+
+        .company-role {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 4px;
+        }
+
+        .company {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: #1a2332;
+        }
+
+        .period {
+            font-size: 0.9rem;
+            color: #78909c;
+            font-weight: 500;
+        }
+
+        .role {
+            font-size: 1rem;
+            color: #546e7a;
+            font-weight: 500;
+        }
+
+        .experience-item ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .experience-item li {
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 8px;
+            color: #455a64;
+            line-height: 1.6;
+        }
+
+        .experience-item li:before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #90a4ae;
+            font-weight: bold;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+
+        .skill-category {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 4px;
+            border: 1px solid #e1e8ed;
+        }
+
+        .skill-category h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1a2332;
+            margin-bottom: 12px;
+        }
+
+        .skill-category p {
+            font-size: 0.95rem;
+            color: #546e7a;
+            line-height: 1.6;
+        }
+
+        .education-item {
+            margin-bottom: 20px;
+        }
+
+        .education-item h3 {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #1a2332;
+            margin-bottom: 4px;
+        }
+
+        .education-item p {
+            font-size: 0.95rem;
+            color: #546e7a;
+        }
+
+        footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid #e1e8ed;
+            text-align: center;
+            color: #78909c;
+            font-size: 0.9rem;
+        }
+
+        footer p {
+            margin-bottom: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 40px 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .title {
+                font-size: 1.05rem;
+            }
+
+            .summary {
+                font-size: 1rem;
+            }
+
+            .company-role {
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                font-size: 11pt;
+            }
+
+            .container {
+                max-width: 100%;
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 24pt;
+            }
+
+            h2 {
+                font-size: 16pt;
+                margin-top: 20px;
+            }
+
+            .contact-links a {
+                color: #2c3e50;
+            }
+
+            section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
 </head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Kantajit Shaw</h1>
+            <div class="title">Senior Applied Machine Learning & Deep Learning Engineer</div>
+            <div class="summary">
+                Machine learning engineer with 9 years of experience building production ML systems across deep learning, NLP, and computer vision. Specialized in designing and deploying large-scale ML infrastructure, LLM-assisted intelligent systems, and end-to-end model lifecycle management for mission-critical applications.
+            </div>
+            <div class="contact-links">
+                <a href="https://linkedin.com/in/kantajitshaw" target="_blank">LinkedIn</a>
+                <a href="https://github.com/kantajitshaw" target="_blank">GitHub</a>
+                <a href="mailto:kantajit.shaw@example.com">kantajit.shaw@example.com</a>
+            </div>
+        </header>
 
-<body id="page-top">
+        <section>
+            <h2>Experience</h2>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
-    <a class="navbar-brand js-scroll-trigger" href="#page-top">
-      <span class="d-block d-lg-none">Kantajit Shaw</span>
-      <span class="d-none d-lg-block">
-        <img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="img/profile.jpg" alt="">
-      </span>
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#about">About</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#education">Education</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#skills">Skills</a>
-         </li>
-         <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#interests">Interests</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="blog.html">Blog</a>
-        </li>
-<!--        <li class="nav-item">
-          <a class="nav-link js-scroll-trigger" href="#awards">Awards</a>
-        </li>
- -->      </ul>
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="company-role">
+                        <span class="company">Zenon</span>
+                        <span class="period">2022 – Present</span>
+                    </div>
+                    <div class="role">Senior Applied Machine Learning Engineer</div>
+                </div>
+                <ul>
+                    <li>Designed and deployed entity resolution system using deep learning embeddings and graph-based matching, processing millions of records with sub-second latency in production</li>
+                    <li>Built document intelligence pipeline combining vision transformers and LLMs for structured data extraction from complex legal and financial documents</li>
+                    <li>Developed LLM-assisted code intelligence platform for legacy codebase analysis, enabling automated refactoring suggestions and dependency mapping across multi-million line repositories</li>
+                    <li>Established ML model monitoring infrastructure with automated drift detection and retraining pipelines, reducing model degradation incidents</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="company-role">
+                        <span class="company">Barclays</span>
+                        <span class="period">2019 – 2022</span>
+                    </div>
+                    <div class="role">Machine Learning Engineer</div>
+                </div>
+                <ul>
+                    <li>Implemented model monitoring and observability framework for credit risk models, tracking performance metrics and data quality across production environments</li>
+                    <li>Built scalable data pipelines using Python and SQL for feature engineering and model serving, processing terabytes of transactional data daily</li>
+                    <li>Collaborated with risk and compliance teams to establish ML model governance practices, ensuring regulatory alignment and auditability</li>
+                    <li>Improved model deployment reliability through containerization and automated testing, reducing deployment time and production incidents</li>
+                </ul>
+            </div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <div class="company-role">
+                        <span class="company">Voxomos Systems</span>
+                        <span class="period">2016 – 2019</span>
+                    </div>
+                    <div class="role">Computer Vision Engineer</div>
+                </div>
+                <ul>
+                    <li>Developed end-to-end OCR system using convolutional neural networks for multi-language document digitization, deployed across enterprise clients</li>
+                    <li>Designed and trained custom deep learning architectures for object detection and classification in industrial inspection applications</li>
+                    <li>Improved model accuracy through systematic data augmentation strategies and architecture optimization, achieving production-grade performance on challenging real-world datasets</li>
+                    <li>Owned complete ML lifecycle from data collection and annotation to model training, evaluation, and production deployment</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Applied ML & Deep Learning</h3>
+                    <p>Model architecture design, training optimization, transfer learning, feature engineering, ensemble methods, model evaluation</p>
+                </div>
+                <div class="skill-category">
+                    <h3>GenAI & LLMs</h3>
+                    <p>Prompt engineering, RAG systems, fine-tuning, embedding models, LLM orchestration, semantic search</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Computer Vision & NLP</h3>
+                    <p>CNNs, transformers, object detection, OCR, text classification, named entity recognition, sequence modeling</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Programming & Systems</h3>
+                    <p>Python, SQL, PyTorch, TensorFlow, scikit-learn, pandas, NumPy, Docker, Git, REST APIs</p>
+                </div>
+                <div class="skill-category">
+                    <h3>ML Infrastructure</h3>
+                    <p>Model deployment, monitoring, versioning, A/B testing, feature stores, pipeline orchestration, MLOps practices</p>
+                </div>
+                <div class="skill-category">
+                    <h3>Cloud & Data Platforms</h3>
+                    <p>AWS, GCP, Azure, Kubernetes, Spark, Airflow, PostgreSQL, Redis, vector databases</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Education</h2>
+            <div class="education-item">
+                <h3>Bachelor of Technology in Computer Science</h3>
+                <p>West Bengal University of Technology</p>
+            </div>
+            <div class="education-item">
+                <h3>Deep Learning Specialization</h3>
+                <p>Coursera – deeplearning.ai</p>
+            </div>
+        </section>
+
+        <footer>
+            <p>Interested in distributed ML systems, large-scale model training, and the intersection of classical ML with modern deep learning approaches.</p>
+            <p>&copy; 2026 Kantajit Shaw</p>
+        </footer>
     </div>
-  </nav>
-
-  <div class="container-fluid p-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
-      <div class="w-100">
-        <h1 class="mb-0">Kantajit
-          <span class="text-primary">Shaw</span>
-        </h1>
-        <div class="subheading mb-5">Noida · +91-988-388-6381 ·
-          <a href="mailto:kantajitshaw@gmail.com">kantajitshaw@gmail.com</a>
-        </div>
-        <p class="lead mb-5">I&#39;m Kantajit Shaw and I&#39;m an Analyst/ Machine learning developer, currently living in Noida, India. I have a Master&nbsp;of Science degree in Computer Science&nbsp;from <a href="http://rkmvu.ac.in/" target="_blank" data-content="http://rkmvu.ac.in/" data-type="external" rel="nofollow">Ramakrishna Mission Vivekananda University</a>
-        	<br/>Other than ML/DL, I also have experience building PHP/Java Servers &amp; Android applications.
-<br/>I&#39;m very much interested in NLP &amp; Image processing. </span>
-
-<br/><span class="color_19">I love listening to music, watching movies in my spare time.</span></p>
-        <div class="social-icons">
-          <a href="https://www.linkedin.com/in/kantajitshaw"  target="_blank" data-content="https://www.linkedin.com/in/kantajitshaw" data-type="external" rel="nofollow">
-            <i class="fab fa-linkedin-in"></i>
-          </a>
-          <a href="https://github.com/kantajitshaw" target="_blank" data-content="https://github.com/kantajitshaw" data-type="external" rel="nofollow">
-            <i class="fab fa-github"></i>
-          </a>
-          <a href="https://medium.com/@kantajitshaw" target="_blank" data-content="https://medium.com/@kantajitshaw" data-type="external" rel="nofollow">
-            <i class="fab fa-medium"></i>
-          </a>
-          <a href="https://twitter.com/kantajitshaw" target="_blank" data-content="https://twitter.com/kantajitshaw" data-type="external" rel="nofollow">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="https://twitter.com/kantajitshaw" target="_blank" data-content="https://twitter.com/kantajitshaw" data-type="external" rel="nofollow">
-            <i class="fab fa-twitter"></i>
-          </a>
-          <a href="https://leetcode.com/kantajitshaw/" target="_blank" data-content="https://leetcode.com/kantajitshaw/" data-type="external" rel="nofollow">
-            <i class="iconify" data-icon="simple-icons:leetcode" style="color: #fff;"></i>
-<!--             <i class="fab fa-facebook-f"></i> -->
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
-      <div class="w-100">
-        <h2 class="mb-5">Experience</h2>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Senior Associate</h3>
-            <div class="subheading mb-3">Zenon</div>
-            Responsible for
-            <ul>
-              <li>Engage with clients to understand their business needs from an analytical standpoint and accordingly define the problem statement(s) to focus on.</li>
-              <li>Understand the data requirements to solve the problem and perform exhaustive exploratory analyses.</li>
-              <li>Build statistical and/or predictive models on the data to assist in better business decision making. Test the performance of the models and deploy them into production by closely working with the client teams</li>
-              <li>Prepare client deliverables, followed by engaging with the clients to discuss results and recommendations.</li>
-            </ul>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">May 2022 - Present</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Senior Analyst</h3>
-            <div class="subheading mb-3">Barclays</div>
-            <ul>
-              <li>Worked on different financial models.</li>
-              <li>Worked on attrition model in multiple financial instruments.</li>
-              <li>Worked on Python for Model analysis and data exploration</li>
-              <li>Wrote quality SQL queries for data analysis</li>
-              <li>Automated monitoring packs to reduce human errors and faster process</li>
-            </ul>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">October 2019 - May 2022</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Member technical Staff - R&D</h3>
-            <div class="subheading mb-3">VOXOMOS SYSTEMS</div>
-            <ul>
-              <li>Built <b>Logo recognition</b> engine which was used to monitor <b>brand presence</b> in <b>social media</b>. </li> 
-              <li>Built <b>OCR (Optical Character Recognition)</b> model to automatically fetch data from <b>Id cards</b> &amp; reduce the time for customer onboarding </li> 
-              <li>Built a <b>neural model</b> to recognize foods in an image to track calorie intakes. </li> 
-              <li>Improved <b>accuracy</b> of existing Image Recognition engine by <b>18%</b> combining traditional machine learning &amp; neural network approach. </li> 
-              <li>Built web-based tool to complete data labeling <b>10x faster</b>. </li> 
-              <li>Built a server that uses <b>MongoDB</b> for keeping track of user activities.</li>
-            </ul>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">August 2016 - October 2019</span>
-          </div>
-        </div>
-
-        <!-- <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0">Web Developer</h3>
-            <div class="subheading mb-3">Intelitec Solutions</div>
-            <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">December 2011 - March 2013</span>
-          </div>
-        </div> -->
-
-      </div>
-
-    </section>
-
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
-      <div class="w-100">
-        <h2 class="mb-5">Education</h2>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0"><a href="http://www.iiitb.ac.in/" target="_blank" data-content="http://rkmvu.ac.in/" data-type="external" rel="nofollow">The International Institute of Information Technology, Bangalore</a></h3>
-            <div class="subheading mb-3">Post Graduation Certification</div>
-            <div>Artificial Intelligence &amp; Machine Learning</div>
-            <!--<p>CGPA: 8.43</p>-->
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">May 2021 - Ongoing</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-          <div class="resume-content">
-            <h3 class="mb-0"><a href="http://rkmvu.ac.in/" target="_blank" data-content="http://rkmvu.ac.in/" data-type="external" rel="nofollow">Ramakrishna Mission Vivekananda Educational & Research Institute </a>( Formerly known as Ramakrishna Mission Vivekananda University )</h3>
-            <div class="subheading mb-3">Master of Science</div>
-            <div>Computer Science</div>
-            <p>CGPA: 8.43</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">August 2014 - July 2016</span>
-          </div>
-        </div>
-
-        <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
-          <div class="resume-content">
-            <h3 class="mb-0"><a href="http://vidyamandira.ac.in/" target="_blank" data-content="http://vidyamandira.ac.in/" data-type="external" rel="nofollow">Ramakrishna Mission Vidyamandira</a></h3>
-            <div class="subheading mb-3">Bachelor of Science</div>
-            <div>Computer Science</div>
-            <p>Percentage: 69.25%</p>
-          </div>
-          <div class="resume-date text-md-right">
-            <span class="text-primary">June 2011 - May 2014</span>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <hr class="m-0">
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
-      <div class="w-100">
-        <h2 class="mb-5">Skills</h2>
-
-        <div class="subheading mb-3">Programming Languages &amp; Tools</div>
-        <ul class="list-inline dev-icons">
-          <li class="list-inline-item">
-            <i class="fab fa-python"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-java"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fas fa-server"t></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fas fa-database"t></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-php"t></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-js"></i>
-          </li>
-          <li class="list-inline-item">
-            <i class="fab fa-android"></i>
-          </li>
-        </ul>
-
-        <div class="subheading mb-3">Skills</div>
-        <ul class="fa-ul mb-0">
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Machine Learning</li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Backend Development</li>
-          <li>
-            <i class="fa-li fa fa-check"></i>
-            Android Development</li>
-        </ul>
-      </div>
-    </section>
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="interests">
-      <div class="w-100">
-        <h2 class="mb-5">Interests</h2>
-        <p>I enjoy learning new technologies/tools. I'm curious about NLP (Natural language processing).</p>
-        <p class="mb-0">When not learning/working, I enjoy watching movies, hanging out with friends. I spend some of my spare time reading Medium articles, following Reddit threads.</p>
-      </div>
-    </section>
-
-<!-- 
-    <hr class="m-0">
-
-    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="awards">
-      <div class="w-100">
-        <h2 class="mb-5">Awards &amp; Certifications</h2>
-        <ul class="fa-ul mb-0">
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            Google Analytics Certified Developer</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            Mobile Web Specialist - Google Certification</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            1<sup>st</sup>
-            Place - University of Colorado Boulder - Emerging Tech Competition 2009</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            1<sup>st</sup>
-            Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            2<sup>nd</sup>
-            Place - University of Colorado Boulder - Emerging Tech Competition 2008</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            1<sup>st</sup>
-            Place - James Buchanan High School - Hackathon 2006</li>
-          <li>
-            <i class="fa-li fa fa-trophy text-warning"></i>
-            3<sup>rd</sup>
-            Place - James Buchanan High School - Hackathon 2005</li>
-        </ul>
-      </div>
-    </section> -->
-
-  </div>
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-  <!-- Plugin JavaScript -->
-  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
-
-  <!-- Custom scripts for this template -->
-  <script src="js/resume.min.js"></script>
-
 </body>
-
 </html>
